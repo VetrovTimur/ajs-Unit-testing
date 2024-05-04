@@ -1,8 +1,5 @@
-# CI Test demo
+# Unit test
 
-### **Важно**
-1. В config file .appveyor.yml - не указывать окружение, как на видео!
-(Будет выкидывать на ошибку при сборке -  Unexpected token '.')
-2. Получилось исправить с **node 14**
+Нужно доделать Mocks
 
-[![Build status](https://ci.appveyor.com/api/projects/status/cut7xbgpo6agmeen?svg=true)](https://ci.appveyor.com/project/VetrovTimur/ajs-jesttest)
+[![Build status](https://ci.appveyor.com/api/projects/status/3s0daq5r3pvj7m9i?svg=true)](https://ci.appveyor.com/project/VetrovTimur/ajs-unit-testing)
