@@ -7,13 +7,12 @@ beforeEach(() => {
     jest.resetAllMocks();
 });
 
-test('should call showLevel', () => {
-    fetchData.mockReturnValue(JSON.stringify({level: 24}));
-    getLevel(24);
-    expect(fetchData).toHaveBeenCalledWith('https://server/user/24');
-});
+test("ShowLevel", () => {
+    fetchData.mockReturnValueOnce({ status: "ok", level: 11});
+    expect(getLevel(1)).toBe("Ваш текущий уровень: 11")
+})
 
-// test('showLevel status - ok', () => {
-//     const result = getLevel(24);
-//     expect(result).toBe(`Ваш текущий уровень: 24`);
-// })
+test("ShowLevel failures", () => {
+    fetchData.mockReturnValueOnce({ status: "no", level: 11});
+    expect(getLevel(1)).toBe("Информация об уровне временно недоступна")
+})
